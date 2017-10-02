@@ -23,7 +23,11 @@ Methodology
 
 ## Tools
 Extracting information from PhenVar (git)
+
 Web-appUCol
+
 GitHub
+
 Polygenic SNP Search Tool Version 2.0 Git
+
 GenomicRobots Git
