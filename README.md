@@ -1,6 +1,6 @@
 # Complex_Phenogeno
 
-**Age-related macular degeneration example**
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Age-related macular degeneration example**
 
 ## Outline
 ![FlowDiagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram.001.jpeg)
