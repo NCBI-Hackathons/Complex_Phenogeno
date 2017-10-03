@@ -1,10 +1,9 @@
 # Complex_Phenogeno
 
 **Age-related macular degeneration example**
-![Image](Images/FlowDiagram.pdf)
 
 ## Outline
-![FlowDiagram](https://octodex.github.com/images/yaktocat.png)
+![FlowDiagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram.001.jpeg)
 
 ## Tools
 1. [PhenVar](https://phenvar.colorado.edu/results/?rsids=800292&visualization=png-wordcloud&visualization=js-graph&normalization_type=default) [(Git)](https://github.com/NCBI-Hackathons/PhenVar/tree/python3)
