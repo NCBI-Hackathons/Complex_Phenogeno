@@ -1,33 +1,16 @@
 # Complex_Phenogeno
 
-##Age-related macular degeneration example
+![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Age-related macular degeneration example**
 
-Genetics of age-related macular degeneration
-Broader characterization -- breast cancer
-Looking at healthy individuals with similar, but not identical genotypes
-National Eye Institute (NEI) Age-Related Eye Disease Study (AREDS)
-User’s guide
-Phenotype categories
-Cataract classification
-Methodology 
-
-### Use phenvar to exctarct polymorphisms associated with AMD from the literature 
-### GenomicRobots will combine sequence data from the AREDS DB with SNPs associated with the disease from the public databases to produce a list of relevant SNPs
-### Curate candidates from 1a and 1b to create final list of genotype features
-
-## From the AREDS DB extract the phenotype data: 
-	(a) Control/drusden/AMD/GA
-	(b) Exam data (as in “variables” section of the dbGAP link)
-
-### Use sub clustering of the phenotype data to extract the labels to be used in a model that links phenotype/genotype for AMD
+## Outline
 
 ## Tools
-Extracting information from PhenVar (git)
+1. [PhenVar](https://phenvar.colorado.edu/results/?rsids=800292&visualization=png-wordcloud&visualization=js-graph&normalization_type=default) [(git)](https://github.com/NCBI-Hackathons/PhenVar/tree/python3)
+2. [GenomicRobots (Git)](https://github.com/NCBI-Hackathons/GenomicRobots)
+3. [Super Concise Single Cell Snp Caller, SC3](https://github.com/NCBI-Hackathons/SC3)
+4. [Polygenic SNP Search Tool, PSST](https://github.com/NCBI-Hackathons/PSST)
 
-Web-appUCol
-
-GitHub
-
-Polygenic SNP Search Tool Version 2.0 Git
-
-GenomicRobots Git
+## References
+1. [The genetics of age-related macular degeneration](http://www.macularisk.com/amd-prognosis/genetics-of-amd.html)
+2. [National Eye Institute (NEI) Age-Related Eye Disease Study (AREDS)](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000001.v3.p1)
+3. 
