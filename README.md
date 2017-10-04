@@ -11,6 +11,7 @@
 3. [Super Concise Single Cell Snp Caller, SC3](https://github.com/NCBI-Hackathons/SC3)
 4. [Polygenic SNP Search Tool, PSST](https://github.com/NCBI-Hackathons/PSST)
 5. [MultiPhen : Joint model of multiple phenotypes can increase discovery in GWAS](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034861) [(CRAN)](https://CRAN.R-project.org/package=MultiPhen)
+6. [SNP Feasible Solutions Algorithm, SNP FSA (Git)](https://github.com/NCBI-Hackathons/Network_Stats_Acc_Interop)
 
 ## References
 1. [The genetics of age-related macular degeneration](http://www.macularisk.com/amd-prognosis/genetics-of-amd.html)
