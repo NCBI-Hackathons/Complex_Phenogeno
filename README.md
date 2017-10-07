@@ -3,7 +3,7 @@
 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) **Age-related macular degeneration example**
 
 ## Outline
-![FlowDiagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram2.001.jpeg)
+![FlowDiagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram3.jpeg.001.jpeg)
 
 ## Tools
 1. [PhenVar](https://phenvar.colorado.edu/results/?rsids=800292&visualization=png-wordcloud&visualization=js-graph&normalization_type=default) [(Git)](https://github.com/NCBI-Hackathons/PhenVar/tree/python3)
