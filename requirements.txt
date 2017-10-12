@@ -1,0 +1,4 @@
+pandas
+re
+biopython
+scikit-allel
