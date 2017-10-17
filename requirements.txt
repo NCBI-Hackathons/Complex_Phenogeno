@@ -1,4 +1,4 @@
 pandas
-re
 biopython
 scikit-allel
+progressbar2

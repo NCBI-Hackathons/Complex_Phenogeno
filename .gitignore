@@ -1,0 +1,21 @@
+# File types #
+########################
+*.log
+*.pyc
+*.vcf
+*vcf.gz
+*.log
+*.ped
+*.map
+*.nosex
+*.bed
+
+# Specific Files #
+########################
+Settings.py
+PreliminaryApproaches.ipynb
+
+# Specific Folders #
+########################
+/VCFs
+/__pycache__
