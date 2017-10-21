@@ -6,3 +6,14 @@ def PhenVar():
 	webbrowser.open_new(url)
 	print("A new web browser window has opened that is showing the PhenVar results for rs{}".format(ID))
 	return(ID)
+
+def rev_dict(dictionary):
+	''' 
+	This function takes a dictionary with strings as keys and a single number as its value.
+	It reverses it by grouping all the keys with the same numeric values together and using 
+	that numeric value as the key of the new dictionary.
+	'''
+	newDict = {i:[] for i in set(dictionary.values())} 
+	for i in dictionary.items():
+		newDict[i[1]].append(str(i[0]))
+	return(newDict)
