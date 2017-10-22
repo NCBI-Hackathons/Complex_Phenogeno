@@ -6,7 +6,6 @@ Unlike illnesses such as sickle cell anemia or cystic fibrosis, where dys-regula
 ### Why are complex diseases so hard to understand?
 
 From a biological perspective, complex diseases can be understood as the effect that combinations of mutations have on multiple pathways; different mutations affect different pathways and all together contribute to the onset and severity of the disease. Moreover, certain environmental and behavioral factors (e.g. radiation exposure, smoking, reduced vitamin intake) might further contribute to disrupting these pathways, deteriorating (or enabling) the observed adverse outcomes, even when the mutational burden for the disorder is not too high. Because [multiple pathways are usually involved in complex disease](https://www.genome.gov/10000865/), the symptoms are also, typically, complex, comprising of a collection of distinct phenotypes that are being monitored and used in diagnosis.
-
 ![PseudoFunction](https://github.com/NCBI-Hackathons/Complex_Phenogeno/tree/master/Images/PseudoFunction.jpeg)
 
 ### The promise for personalized medicine and current limitations
