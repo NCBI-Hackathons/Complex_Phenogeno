@@ -14,7 +14,8 @@ print("""
 |_|   |_| |_|\___|_| |_|\___/_/  \____|\___|_| |_|\___/ 
                     """)
 
-print("\n\nComplex Pheno/Geno is writter for Python 3.6 and is under development.\nFor comments and suggestions e-mail rodoniki@gmail.com\n\n")
+print("\n\nComplex Pheno/Geno is written for Python 3.6 and is under development.")
+print("Please make sure plink 1.9 (https://www.cog-genomics.org/plink2) is installed in your computer before continuing.\nFor comments and suggestions e-mail rodoniki@gmail.com\n\n")
 print("Please make sure all the input files are in a subdirectory in the same folder as Complex Pheno/Geno.")
 print("The folder should be named Inputs/") 
 yn = input("Do you want to proceed? (yes/no):")
@@ -28,7 +29,8 @@ else:
 	if os.path.exists('./../Inputs/'):
 		#Need to enter checks for the correct file formats and presence
 		system("mkdir ./../Outputs/")
-		import Workflow
+		import rsIDs
+		#import Genotypes
 	else:
 		print("I cannot find a directory named Inputs/")
 		print("Bye!")

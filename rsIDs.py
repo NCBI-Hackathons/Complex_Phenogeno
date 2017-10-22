@@ -56,6 +56,7 @@ else:
 			print("You have not entered a value between 1 and {}. Please retry.\n".format(max(numPmids[0:len(numPmids)-1])))
 	print('\nYou have selected to analyse {} different rsIDs that are co-cited together with rs{} (included).'.format(len(selected_rsids), ID))
 
+##4. Export the rsIDs that will be used in the analysis
 	with open('./../Outputs/rsids.txt', 'a+') as f:
 		for item in rsids:
 			f.write("rs{} ".format(item))
