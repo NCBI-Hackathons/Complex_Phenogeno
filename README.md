@@ -32,6 +32,8 @@ There has now been more than ten years, and thousands of publications referencin
 
 ### The Complex Pheno/Geno algorithm
 
+![Flow diagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram.jpeg)
+
 ### Implementation on Age-Related Macular Degeneration (AMD) data
 
 AMD was the first disease to be used in [GWAS studies](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000001.v3.p1) and is currently probably one of the [best characterised](https://nei.nih.gov/news/pressreleases/habits_genes_affect_AMD) complex diseases. Data from the [National Eye Institute (NEI) Age-Related Eye Disease Study (AREDS)](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000001.v3.p1) were used in a proof-of-principle implementation of **Complex Pheno/Geno** as shown in the notebook `AMD_example.ipynb`.
