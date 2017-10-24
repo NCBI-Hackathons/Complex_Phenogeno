@@ -10,16 +10,17 @@ if len(prefix) == 0:
 	exit()
 else:
 
-	import multiprocessing
-	import progressbar
+	from multiprocessing import Pool
 	from os import system
 	from Functions import ExtractRsID
+	import time
 
-	bar = progressbar.ProgressBar()
-	pool = multiprocessing.Pool(len(prefix)) # run as many processes as vcfs. The default is the number of CPU cores.
-	results = [pool.apply_async( ExtractRsID, p ) for p in prefix]
-	for result in bar(results):
-		result.get()
+	start_time = time.time()
+	pool = Pool()
+	pool.map(ExtractRsID, prefix)
+	print("--- {} minutes ---".format(str((time.time() - start_time)/60)))
+
+
 	
 
 
