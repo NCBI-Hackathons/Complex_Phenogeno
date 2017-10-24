@@ -31,6 +31,7 @@ else:
 		system("mkdir ./../Outputs/")
 		import rsIDs
 		#import Genotypes
+		
 	else:
 		print("I cannot find a directory named Inputs/")
 		print("Bye!")

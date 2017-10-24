@@ -17,3 +17,9 @@ def rev_dict(dictionary):
 	for i in dictionary.items():
 		newDict[i[1]].append(str(i[0]))
 	return(newDict)
+
+def ExtractRsID(Path, Prefix):
+	'''The following function requires installation of plink 1.9 from https:
+	//www.cog-genomics.org/plink2 at the PATH directory'''
+	print("Processing {}".format(Prefix))
+	system('plink --vcf {}/{}.vcf.gz --recode12 --tab --extract temp_rsids.txt --out {}'.format(Path, Prefix,Prefix))

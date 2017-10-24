@@ -32,6 +32,15 @@ There has now been more than ten years, and thousands of publications referencin
 
 ### The Complex Pheno/Geno algorithm
 
+Run Complex Pheno/Geno from the Terminal calling 
+
+`python3 ComplexPhenoGeno.py`
+
+##### Dependencies
+* Python 3.6
+* Plink 1.9
+* Entrez Programming Utilities (E-utilities) API
+
 ![Flow diagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram.jpeg)
 
 ### Implementation on Age-Related Macular Degeneration (AMD) data
