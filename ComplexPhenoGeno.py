@@ -30,7 +30,7 @@ else:
 		#Need to enter checks for the correct file formats and presence
 		system("mkdir ./../Outputs/")
 		import rsIDs
-		#import Genotypes
+		import Genotypes
 		
 	else:
 		print("I cannot find a directory named Inputs/")

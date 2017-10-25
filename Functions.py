@@ -25,3 +25,11 @@ def ExtractRsID(Prefix):
 	print("Processing {}".format(Prefix))
 	system('plink --vcf ./../Inputs/{}.vcf.gz --recode --extract ./../Outputs/rsids.txt --out {}'.format(Prefix, Prefix))
 	system('plink --file {} --recodeAD --out {}'.format(Prefix, Prefix))
+
+def importRaw(Prefix):
+	'''Imports and cleanups .raw files created by ExtractRsID'''
+	import pandas as pd
+	tab = pd.read_table(Prefix + '.raw', sep=' ')
+	to_drop = [i for i in list(tab)[1:] if 'HET' in i or 'rs' not in i]
+	tab.drop(to_drop, axis=1, inplace=True, errors='raise')
+	return(tab)
