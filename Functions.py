@@ -42,18 +42,54 @@ def clin_data(name,pct_train):
 
 	import pandas as pd
 	import numpy as np
-	
-    data = pd.read_csv('./../Inputs/' + name + '.csv',sep = "," , index_col = 0) 
-    is_train = np.random.uniform(0, 1, len(data)) <= pct_train
-    train_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==True]
-    test_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==False]
-    train_data = data.filter(items=train_idx, axis = 0)
-    test_data = data.filter(items=test_idx, axis = 0)
-    
-    data = {
-    'train_Y' : train_data[train_data.columns[0]],
-    'test_Y' : test_data[test_data.columns[0]],
 
-    'train_X' : train_data.drop(train_data.columns[0], axis=1),
-    'test_X' : test_data.drop(test_data.columns[0],axis=1)}
-    return(data)
+	data = pd.read_csv('./../Inputs/' + name + '.csv',sep = "," , index_col = 0)
+	is_train = np.random.uniform(0, 1, len(data)) <= pct_train
+	train_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==True]
+	test_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==False]
+	train_data = data.filter(items=train_idx, axis = 0)
+	test_data = data.filter(items=test_idx, axis = 0)
+
+	d = {
+	'train_Y' : train_data[train_data.columns[0]],
+	'test_Y' : test_data[test_data.columns[0]],
+	'train_X' : train_data.drop(train_data.columns[0], axis=1),
+	'test_X' : test_data.drop(test_data.columns[0],axis=1),
+	'dataset' : data
+	}
+	return(d)
+
+def empirical_auc(data, Y_hat):
+	''' data = is the dictionary returned from function clin_data()
+		Y_hat = is the rpedicted values'''
+
+	import pandas as pd
+
+	TPR = []
+	FPR = []
+	ranges = range(min(data['test_Y'])+2 , max(data['test_Y'])-2 ,1)
+	temp = pd.DataFrame({'obs': list(data['test_Y']), 'pred': Y_hat})
+
+	for i in ranges:
+	    TP = 0
+	    FP = 0
+	    TN = 0
+	    FN = 0
+	    for j in range(len(temp)):
+	        if temp['obs'][j]>=i and temp['pred'][j]>=i:
+	            TP = TP + 1
+	        elif temp['obs'][j]<i and temp['pred'][j]<i:
+	            TN = TN + 1
+	        elif temp['obs'][j]>=i and temp['pred'][j]<i:
+	            FN = FN + 1
+	        elif temp['obs'][j]<i and temp['pred'][j]>=i:
+	            FP = FP + 1
+	        else:
+	            print("WTF")
+
+	    TPR.append(TP / (TP + FN))
+	    FPR.append(FP / (TN + FP))
+
+	from numpy import trapz
+	return(trapz(TPR[::-1], x=FPR[::-1]))
+	 

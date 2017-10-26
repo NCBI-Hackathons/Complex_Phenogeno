@@ -32,6 +32,7 @@ else:
 		system("mkdir ./../Outputs/")
 		import rsIDs
 		import Genotypes
+		import Models
 		
 	else:
 		print("I cannot find a directory named Inputs/")
