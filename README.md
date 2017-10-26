@@ -28,7 +28,7 @@ The table below outlines the main limitations to developing personalized medicin
 
 ## Complex Pheno/Geno
 
-There has now been more than ten years, and thousands of publications referencing GWAS (and other) studies, which resulted in the discovery of hundreds of thousands of pathologic single nucleotide polymorphisms (identified through unique [rsIDs](https://www.ncbi.nlm.nih.gov/books/NBK174586/)). Taking advantage of this existing (and growing) knowledge generated in the lab, Complex Pheno/Geno restricts the genome space to be used in predictive models for the disease, potentially lowering the costs of personilized medicine. At the same time it explores models that could offer good explanatory power to the observed pathologic outcomes, taking into consideration the various diagnostic measurements and known environmental modulators.
+There has now been more than ten years, and thousands of publications referencing GWAS (and other) studies, which resulted in the discovery of hunderds of thousands of single nucleotide polymorphisms (identified through unique [rsIDs](https://www.ncbi.nlm.nih.gov/books/NBK174586/)). Taking advantage of this existing (and growing) knowledge generated in the lab, Complex Pheno/Geno restricts the genome space to be used in predictive models for the disease, potentially lowering the costs of personilized medicine. At the same time it explores models that could offer good explanatory power to the observed pathologic outcomes, taking into consideration the various diagnostic measurements and known environmental modulators.
 
 ### The Complex Pheno/Geno algorithm
 

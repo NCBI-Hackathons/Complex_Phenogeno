@@ -33,3 +33,27 @@ def importRaw(Prefix):
 	to_drop = [i for i in list(tab)[1:] if 'HET' in i or 'rs' not in i]
 	tab.drop(to_drop, axis=1, inplace=True, errors='raise')
 	return(tab)
+
+def clin_data(name,pct_train):
+
+	''' This function reads in the csv file of the given name from Inputs, splits it randomly to
+	train and test data according to the percentage of train data given,
+	and returns the train and test, outputs(Y) and features(X) as a dictionary'''
+
+	import pandas as pd
+	import numpy as np
+	
+    data = pd.read_csv('./../Inputs/' + name + '.csv',sep = "," , index_col = 0) 
+    is_train = np.random.uniform(0, 1, len(data)) <= pct_train
+    train_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==True]
+    test_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==False]
+    train_data = data.filter(items=train_idx, axis = 0)
+    test_data = data.filter(items=test_idx, axis = 0)
+    
+    data = {
+    'train_Y' : train_data[train_data.columns[0]],
+    'test_Y' : test_data[test_data.columns[0]],
+
+    'train_X' : train_data.drop(train_data.columns[0], axis=1),
+    'test_X' : test_data.drop(test_data.columns[0],axis=1)}
+    return(data)

@@ -27,7 +27,8 @@ else:
 	import os
 
 	if os.path.exists('./../Inputs/'):
-		#Need to enter checks for the correct file formats and presence
+		#Need to enter checks for the correct file formats and presence 
+		#make a class!
 		system("mkdir ./../Outputs/")
 		import rsIDs
 		import Genotypes

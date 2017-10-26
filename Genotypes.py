@@ -30,6 +30,10 @@ else:
 	print(A.head())
 	A.to_csv("./../Outputs/Genotypes.csv", sep="\t")
 
+	from os import system
+
+	system('rm *.raw *.ped *.map *.nosex *.log')
+
 
 
 
