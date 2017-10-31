@@ -3,3 +3,5 @@ progressbar2
 numpy
 pandas
 scikit-learn
+tensorflow
+keras
