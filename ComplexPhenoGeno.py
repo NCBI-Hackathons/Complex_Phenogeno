@@ -18,32 +18,31 @@ print("\n\nComplex Pheno/Geno is written for Python 3.6 and is under development
 print("Please make sure plink 1.9 (https://www.cog-genomics.org/plink2) is installed in your computer before continuing.\nFor comments and suggestions e-mail rodoniki@gmail.com\n\n")
 print("Please make sure all the input files are in a subdirectory in the same folder as Complex Pheno/Geno.")
 print("The folder should be named Files/") 
-yn = input("Do you want to proceed? (yes/no):")
-if yn != 'yes':
-	print("Bye!")
-	exit()
-else:
-	from os import system
-	import os
+print("Some toy datasets are already provided and will be used if you don't have the necessary folder.") 
 
-	if os.path.exists('./../Files/'):
-		#Need to enter checks for the correct file formats and presence 
-		#make a class!
-		system("mkdir ./../Outputs/")
-		import rsIDs
-		print("#####################################################################################")
-		print("################################	MODELLING CLINICAL DATA ############################")
-		print("#####################################################################################")
-		import Models
-		print("#####################################################################################")
-		print("################################	PROCESSING THE GENOTYPES ###########################")
-		print("#####################################################################################")
-		import Genotypes
-		
-	else:
-		print("I cannot find a directory named Files/")
+from os import system
+import os
+
+if os.path.exists('./../Files/') == False:
+	yn = input("I cannot find a directory named Files/. Proceed with dummy files? (yes/no)").lower()
+	if yn != "yes":
 		print("Bye!")
 		exit()
+	else:
+		system("mv Files/ ./../Files/")
+#Need to enter checks for the correct file formats and presence 
+#make a class!
+system("mkdir ./../Outputs/")
+import rsIDs
+print("#####################################################################################")
+print("################################	MODELLING CLINICAL DATA ############################")
+print("#####################################################################################")
+import Models
+print("#####################################################################################")
+print("################################	PROCESSING THE GENOTYPES ###########################")
+print("#####################################################################################")
+import Genotypes
+	
 
 if __name__ == "__main__":
 	main()
