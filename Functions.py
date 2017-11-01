@@ -1,7 +1,7 @@
 def PhenVar():
-	print("\nAs a first step, you can confirm that your querry rsID returns results from literature that are specific to your complex disease of interest.\n")
+	print("\nAs a first step, you can confirm that your query rsID returns results from literature that are specific to your complex disease of interest.\n")
 	web = input("Do you want to open a browser to check your rsID with PhenVar? (Yes/No)").lower()
-	ID =input("Please enter a querry rsID number (do not include the letters 'rs'): ")
+	ID =input("Please enter a query rsID number (do not include the letters 'rs'): ")
 	if web == 'yes':
 		import webbrowser
 		url = 'https://phenvar.colorado.edu/results/?rsids='+ID+'&visualization=png-wordcloud&visualization=js-graph&normalization_type=default'

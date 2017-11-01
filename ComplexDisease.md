@@ -28,3 +28,9 @@ The table below outlines the main limitations to developing personalized medicin
 ## Complex Pheno/Geno
 
 There has now been more than ten years, and thousands of publications referencing GWAS (and other) studies, which resulted in the discovery of hunderds of thousands of single nucleotide polymorphisms (identified through unique [rsIDs](https://www.ncbi.nlm.nih.gov/books/NBK174586/)). Taking advantage of this existing (and growing) knowledge generated in the lab, Complex Pheno/Geno restricts the genome space to be used in predictive models for the disease, potentially lowering the costs of personilized medicine. At the same time it explores models that could offer good explanatory power to the observed pathologic outcomes, taking into consideration the various diagnostic measurements and known environmental modulators.
+
+
+## Further readings
+1. [A simple explanation of heredity in complex disease](https://www.med.unc.edu/neurology/files/documents/child-teaching-pdf/Genetics%20Disease.pdf) (UNC Chapel Hill, USA)
+2. [Genetic and environmental interactions in complex disease](http://www.genetics.edu.au/publications-and-resources/facts-sheets/fact-sheet-11-environmental-and-genetic-interactions) (New South Wales Health, Australia) 
+3. [Wikipedia entry on GWAS](https://en.wikipedia.org/wiki/Genome-wide_association_study)
