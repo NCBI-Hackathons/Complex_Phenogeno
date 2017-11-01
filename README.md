@@ -34,13 +34,29 @@ Downloading Complex PhenoGeno comes with some dummy data files to make sure ever
 
 Complex Pheno/Geno requires your data to be formated in a specific way. These expectations are nothing more than careful data preprocessing, a good practice for any analysis. Please follow the instructions bellow when preparing your data: 
 
-1. Create a new folder called "files" in the same folder where you dowloaded Complex PhenoGeno. Below are the expected data and their expected formats (you can inspect the dummy data included with the package for an example):
+Create a new folder called "files" in the same folder where you dowloaded Complex PhenoGeno. Below are the expected data and their expected formats (you can inspect the dummy data included with the package for an example):
 
 	a. **VCFs of the patient genotypes** in gz compressed format. One vcf per chromosome or any type of fragmentation of the data that suits your needs. Multiple files are expected, so please do not include all your genotype data in one VCF file. This is necessary to speed up this pre-processing step by parallelizing the process. Please consult [VCFtools](https://vcftools.github.io/examples.html) on how to manipulate and split these files. The files need to be gz complessed (*i.e.* <name>.vcf.gz).
 
 	b. **CSVs of the clinical results**. The rows are the individual identifiers of the cohort (same as those in the VCF files), and the columns are the different clinical tests performed. Missing values are not allowed. Both continuous and integer values are allowed, categorical values should be represented as dummy variables in their own columns (eg if three individuals, a, b, and c, each belong to categories "A", "B", and "C" respectively, there should be three columns, A, B, C, with values "A":[1,0,0] , "B":[0,1,0] , and "C":[0,0,1]. For more details on dummy variables go [here](https://www.moresteam.com/whitepapers/download/dummy-variables.pdf))
 
-2. When prompted to answer 
+	c. **CSVs of the behavioral data available for the cohort**. Instructions as in b.
 
-3. Only data in the folder "files" will be considered during analysis.
+Only data in the folder "files" will be considered during analysis. 
+
+## C. Running Complex Pheno/Geno
+
+Once everything is settup, got to Terminal, inside the ComplexPhenoGeno folder, and type:
+
+`python3 ComplexPhenoGeno.py`
+
+This will start a guided interactive session that will guide you through the various steps of the algorithm. Depending on the size of your files, you should expect a minimum of one hour for the entire workflow (approximately 2,000 individuals in cohort). Below are the steps of the Complex Pheno/Geno pipeline:
+
+1. **Module rsIDs.py** You are asked to enter an rsID that you know is strongly causally related to the [Complex Disease](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/ComplexDisease.md) of interest. Using E-utilities and feedback from [PhenVar](https://phenvar.colorado.edu), this first step identifies other rsIDs that are co-cited with your query rsID in the literarure. Make sure the results' visualization offered by PhenVar in a new browser window make sense. You are offered the ability to filter the rsIDs by the number of publications supporting their co-citation with the query rsID. The folder Outputs is created, and the results are saved in Outputs/rsids.txt.
+
+2.
+
+3.
+
+4.
 
