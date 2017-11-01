@@ -9,7 +9,7 @@ clin_name = input("What is the name of the cvs file holding the clinical data? "
 pct_train = float(input("What fraction of the clinical data do you want to use for training? (Recommended is 0.7) "))
 
 # Linear model (reference)
-
+print('##############	Calculating Linear Regression Model ########################')
 bar1 = ProgressBar()
 AUC_lm = []
 for i in bar1(range(1000)):
@@ -30,7 +30,7 @@ print("The AUC for the LM is {:.2f}, stdev = {:.2f}.".format(np.average(AUC_lm),
 results = {key: [] for key in range(4,51,2)}
 
 bar2 = ProgressBar()
-
+print('##############	Calculating Random Forest Model ########################')
 #Identify optimal parameters
 for j in bar2(range(50)):
     for i in range(4,51,2):
@@ -42,7 +42,7 @@ for j in bar2(range(50)):
         results[i].append(auc) 
 
 for i in range(4,51,2):
-    print("Tree depth of {} has average AUC of {} with stdev {}".format(i, np.average(results[i]), np.std(results[i])))
+    print("Tree depth of {} has average AUC of {:.2f} with stdev {:.2f}".format(i, np.average(results[i]), np.std(results[i])))
 
 depth = int(input("What tree depth do you want to use in the analysis? "))
 

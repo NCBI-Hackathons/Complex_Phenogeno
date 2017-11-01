@@ -10,7 +10,7 @@ IN = 'no'
 
 while  IN == 'no':
 	ID = PhenVar()
-	print("\nIf you are satisfied with the results and want to continue with the analysis, please enter 'YES'.")
+	print("\nIf you want to continue with the analysis, please enter 'YES'.")
 	IN = input("If you want to enter another rsID, please enter 'NO'. ").lower()
 if IN != 'yes':
 	print("\nYour answer was {}. You needed to enter either 'Yes' or 'No'. Please start again.".format(IN))
