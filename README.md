@@ -47,8 +47,11 @@ Run Complex Pheno/Geno from the Terminal calling
 
 1. Download Complex PhenoGeno from this repository to your computer.
 2. Create a new folder called "Files" in the same folder where you dowloaded Complex PhenoGeno. Below are the accepted formats:
+
 	a. VCFs of the patient genotypes in gz compressed format. One vcf per chromosome.
-	b. CSVs of the clinical results and behavioral data
+
+	b. CSVs of the clinical results and behavioral data.
+	
 Downloading Complex PhenoGeno comes with some dummy data files to make sure everything runs smoothly
 3. Open Terminal, cd to the newly downladed Complex PhenoGeno directory and run:
 `pip3 intsall -r requirements`
