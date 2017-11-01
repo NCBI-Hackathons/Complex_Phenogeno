@@ -30,13 +30,13 @@ This will install all the necessary python modules. It is advised that you creat
 
 ## B. Preparing the datasets
 
-Downloading Complex PhenoGeno comes with some dummy data files to make sure everything runs smoothly before you run your data. These data will be used if you indicate so during the session, or will be skipped if you have created a "files" folder with your own data. If you choose to use the dummy data, you don't need to do anything of the things described below. 
+Downloading Complex PhenoGeno comes with some dummy data files to make sure everything works smoothly before you run your own data. These dummy data will be used if there is no "files" folder (see below) and you indicate so during the session. If you choose to use the dummy data, you don't need to do any of the steps described below.
 
 Complex Pheno/Geno requires your data to be formated in a specific way. These expectations are nothing more than careful data preprocessing, a good practice for any analysis. Please follow the instructions bellow when preparing your data: 
 
 1. Create a new folder called "files" in the same folder where you dowloaded Complex PhenoGeno. Below are the expected data and their expected formats (you can inspect the dummy data included with the package for an example):
 
-	a. **VCFs of the patient genotypes** in gz compressed format. One vcf per chromosome or any type of fragmentation of the data that suits your needs. Multiple files are expected, so please do not include all your genotype data in one VCF file. This is necessary to speed up this pre-processing step by parallelizing the process. Please consult [VCFtools](https://vcftools.github.io/examples.html) on how to manipulate and split these files. The files need to be gz complessed (*e.g.* <name>.vcf.gz).
+	a. **VCFs of the patient genotypes** in gz compressed format. One vcf per chromosome or any type of fragmentation of the data that suits your needs. Multiple files are expected, so please do not include all your genotype data in one VCF file. This is necessary to speed up this pre-processing step by parallelizing the process. Please consult [VCFtools](https://vcftools.github.io/examples.html) on how to manipulate and split these files. The files need to be gz complessed (*i.e.* <name>.vcf.gz).
 
 	b. **CSVs of the clinical results**. The rows are the individual identifiers of the cohort (same as those in the VCF files), and the columns are the different clinical tests performed. Missing values are not allowed. Both continuous and integer values are allowed, categorical values should be represented as dummy variables in their own columns (eg if three individuals, a, b, and c, each belong to categories "A", "B", and "C" respectively, there should be three columns, A, B, C, with values "A":[1,0,0] , "B":[0,1,0] , and "C":[0,0,1]. For more details on dummy variables go [here](https://www.moresteam.com/whitepapers/download/dummy-variables.pdf))
 
