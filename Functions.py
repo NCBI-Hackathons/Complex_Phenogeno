@@ -25,7 +25,7 @@ def ExtractRsID(Prefix):
 	//www.cog-genomics.org/plink2 at the PATH directory'''
 	from os import system
 	print("Processing {}".format(Prefix))
-	system('plink --vcf ./../Files/{}.vcf.gz --recode --extract ./../Outputs/rsids.txt --out {}'.format(Prefix, Prefix))
+	system('plink --vcf ./../files/{}.vcf.gz --recode --extract ./../Outputs/rsids.txt --out {}'.format(Prefix, Prefix))
 	system('plink --file {} --recodeAD --out {}'.format(Prefix, Prefix))
 
 def importRaw(Prefix):
@@ -38,14 +38,14 @@ def importRaw(Prefix):
 
 def clin_data(name,pct_train):
 
-    ''' This function reads in the csv file of the given name from Files, splits it randomly to
+    ''' This function reads in the csv file of the given name from files, splits it randomly to
     train and test data according to the percentage of train data given,
     and returns the train and test, outputs(Y) and features(X) as a dictionary'''
 
     import pandas as pd
     import numpy as np
 
-    data = pd.read_csv('./../Files/' + name + '.csv',sep = "," , index_col = 0)
+    data = pd.read_csv('./../files/' + name + '.csv',sep = "," , index_col = 0)
     is_train = np.random.uniform(0, 1, len(data)) <= pct_train
     train_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==True]
     test_idx = [i[0] for i in zip(range(len(data)), is_train) if i[1]==False]

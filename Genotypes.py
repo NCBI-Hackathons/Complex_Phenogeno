@@ -2,11 +2,11 @@ from os import listdir
 import re
 
 
-files = listdir('./../Files')
+files = listdir('./../files')
 vcfs = [i for i in filter(lambda x: x.endswith('.vcf.gz'), files)]
 prefix = [re.sub('.vcf.gz', '', vcf) for vcf in vcfs]
 if len(prefix) == 0:
-	print("There are no vcf.gz files in the Files/ directory.")
+	print("There are no vcf.gz files in the files/ directory.")
 	print("Bye!")
 	exit()
 else:

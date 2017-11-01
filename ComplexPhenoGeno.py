@@ -17,19 +17,19 @@ print("""
 print("\n\nComplex Pheno/Geno is written for Python 3.6 and is under development.")
 print("Please make sure plink 1.9 (https://www.cog-genomics.org/plink2) is installed in your computer before continuing.\nFor comments and suggestions e-mail rodoniki@gmail.com\n\n")
 print("Please make sure all the input files are in a subdirectory in the same folder as Complex Pheno/Geno.")
-print("The folder should be named Files/") 
+print("The folder should be named files/") 
 print("Some toy datasets are already provided and will be used if you don't have the necessary folder.") 
 
 from os import system
 import os
 
-if os.path.exists('./../Files/') == False:
-	yn = input("I cannot find a directory named Files/. Proceed with dummy files? (yes/no)").lower()
+if os.path.exists('./../files/') == False:
+	yn = input("I cannot find a directory named files/. Proceed with dummy files? (yes/no)").lower()
 	if yn != "yes":
 		print("Bye!")
 		exit()
 	else:
-		system("mv Files/ ./../Files/")
+		system("mv files/ ./../files/")
 #Need to enter checks for the correct file formats and presence 
 #make a class!
 system("mkdir ./../Outputs/")

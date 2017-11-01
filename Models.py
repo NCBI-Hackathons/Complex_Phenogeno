@@ -5,7 +5,7 @@ import numpy as np
 from progressbar import ProgressBar
 
 
-clin_name = input("What is the name of the cvs file holding the clinical data? ")
+clin_name = input("What is the name of the csv file holding the clinical data? \n (If using the toy datasets, the name should be: fertility)\n")
 pct_train = float(input("What fraction of the clinical data do you want to use for training? (Recommended is 0.7) "))
 
 # Linear model (reference)
