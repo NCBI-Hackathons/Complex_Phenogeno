@@ -43,12 +43,15 @@ Run Complex Pheno/Geno from the Terminal calling
 
 ![Flow diagram](https://github.com/NCBI-Hackathons/Complex_Phenogeno/blob/master/Images/FlowDiagram.jpeg)
 
-### Implementation on Age-Related Macular Degeneration (AMD) data
+### Preparing to run the sofware
 
-AMD was the first disease to be used in [GWAS studies](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000001.v3.p1) and is currently probably one of the [best characterised](https://nei.nih.gov/news/pressreleases/habits_genes_affect_AMD) complex diseases. Data from the [National Eye Institute (NEI) Age-Related Eye Disease Study (AREDS)](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000001.v3.p1) were used in a proof-of-principle implementation of **Complex Pheno/Geno** as shown in the notebook `AMD_example.ipynb`.
+1. Download Complex PhenoGeno from this repository to your computer.
+2. Create a new folder called "Files" in the same folder where you dowloaded Complex PhenoGeno. Below are the accepted formats:
+	a. VCFs of the patient genotypes in gz compressed format. One vcf per chromosome.
+	b. CSVs of the clinical results and behavioral data
+Downloading Complex PhenoGeno comes with some dummy data files to make sure everything runs smoothly
+3. Open Terminal, cd to the newly downladed Complex PhenoGeno directory and run:
+`pip3 intsall -r requirements`
+This will install all the necessary python modules. It is advised that you create an environment and run this from within this environment.
+4. Open the file "Settings.txt" and change the e-mail to the email you used to register to E-utilities.
 
-
-## Further readings
-1. [A simple explanation of heredity in complex disease](https://www.med.unc.edu/neurology/files/documents/child-teaching-pdf/Genetics%20Disease.pdf) (UNC Chapel Hill, USA)
-2. [Genetic and environmental interactions in complex disease](http://www.genetics.edu.au/publications-and-resources/facts-sheets/fact-sheet-11-environmental-and-genetic-interactions) (New South Wales Health, Australia) 
-3. [Wikipedia entry on GWAS](https://en.wikipedia.org/wiki/Genome-wide_association_study)

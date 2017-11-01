@@ -1,11 +1,12 @@
 from os import listdir
 import re
 
-files = listdir('./../Inputs')
+
+files = listdir('./../Files')
 vcfs = [i for i in filter(lambda x: x.endswith('.vcf.gz'), files)]
 prefix = [re.sub('.vcf.gz', '', vcf) for vcf in vcfs]
 if len(prefix) == 0:
-	print("There are no vcf.gz files in the Inputs/ directory.")
+	print("There are no vcf.gz files in the Files/ directory.")
 	print("Bye!")
 	exit()
 else:
@@ -33,6 +34,8 @@ else:
 	from os import system
 
 	system('rm *.raw *.ped *.map *.nosex *.log')
+
+	print("The rsID-specific genotypes of your cohort are now saved at Outputs/Genotypes.csv")
 
 
 

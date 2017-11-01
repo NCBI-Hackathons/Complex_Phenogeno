@@ -14,12 +14,16 @@ while  IN == 'no':
 	IN = input("If you want to enter another rsID, please enter 'NO'. ").lower()
 if IN != 'yes':
 	print("\nYour answer was {}. You needed to enter either 'Yes' or 'No'. Please start again.".format(IN))
+	exit()
 
 ##2. Retrive PMIDs and their associated rsIDs
 else:
 	data =  Entrez.read(Entrez.elink(dbfrom='snp', db = 'pubmed', linkname='snp_pubmed_cited', id=ID))
 	pmids =  [id_dict['Id'] for id_dict in data[0]['LinkSetDb'][0]["Link"]]
 	rsids = []	
+
+	print("################################	SEARCHING RELATED rsIDs ############################")
+
 	bar = ProgressBar()
 	for pmid in bar(pmids):
 		data = Entrez.read(Entrez.elink(dbfrom='pubmed',db='snp',linkname='pubmed_snp_cited',id=pmid))
@@ -61,4 +65,4 @@ else:
 		for item in rsids:
 			f.write("rs{} ".format(item))
 
-
+print("The rsID list is now saved at Outputs/rsids.csv")

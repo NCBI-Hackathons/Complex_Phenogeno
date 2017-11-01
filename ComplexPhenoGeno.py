@@ -17,7 +17,7 @@ print("""
 print("\n\nComplex Pheno/Geno is written for Python 3.6 and is under development.")
 print("Please make sure plink 1.9 (https://www.cog-genomics.org/plink2) is installed in your computer before continuing.\nFor comments and suggestions e-mail rodoniki@gmail.com\n\n")
 print("Please make sure all the input files are in a subdirectory in the same folder as Complex Pheno/Geno.")
-print("The folder should be named Inputs/") 
+print("The folder should be named Files/") 
 yn = input("Do you want to proceed? (yes/no):")
 if yn != 'yes':
 	print("Bye!")
@@ -26,17 +26,25 @@ else:
 	from os import system
 	import os
 
-	if os.path.exists('./../Inputs/'):
+	if os.path.exists('./../Files/'):
 		#Need to enter checks for the correct file formats and presence 
 		#make a class!
 		system("mkdir ./../Outputs/")
 		import rsIDs
-		import Genotypes
+		print("#####################################################################################")
+		print("################################	MODELLING CLINICAL DATA ############################")
+		print("#####################################################################################")
 		import Models
+		print("#####################################################################################")
+		print("################################	PROCESSING THE GENOTYPES ###########################")
+		print("#####################################################################################")
+		import Genotypes
 		
 	else:
-		print("I cannot find a directory named Inputs/")
+		print("I cannot find a directory named Files/")
 		print("Bye!")
 		exit()
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
+	main()
+

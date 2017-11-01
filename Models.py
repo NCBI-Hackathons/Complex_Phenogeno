@@ -44,5 +44,15 @@ for j in bar2(range(50)):
 for i in range(4,51,2):
     print("Tree depth of {} has average AUC of {} with stdev {}".format(i, np.average(results[i]), np.std(results[i])))
 
-depth = input("What tree depth do you want to use in the analysis? ")
+depth = int(input("What tree depth do you want to use in the analysis? "))
 
+forest = RandomForestClassifier(n_estimators = 200, max_depth=depth)
+forest.fit(data['train_X'], list(data['train_Y']))
+Y_hat_rf = forest.predict(data['test_X'])
+
+#e_rf = np.subtract(data['test_Y'], Y_hat_lm)
+#oe_rf = data['test_Y']/ Y_hat_lm	
+
+#data
+
+#print("")
