@@ -23,6 +23,9 @@ print("Some toy datasets are already provided and will be used if you don't have
 from os import system
 import os
 
+if os.path.exists('./../Outputs/'):
+	system('rm -r ./../Outputs/')
+
 if os.path.exists('./../files/') == False:
 	yn = input("I cannot find a directory named files/. Proceed with dummy files? (yes/no)").lower()
 	if yn != "yes":
@@ -35,14 +38,25 @@ if os.path.exists('./../files/') == False:
 system("mkdir ./../Outputs/")
 import rsIDs
 print("#####################################################################################")
+print("################	PROCESSING THE GENOTYPES AND FILTERING RSIDs #######################")
+print("#####################################################################################")
+import Genotypes
+print("#####################################################################################")
 print("################################	MODELLING CLINICAL DATA ############################")
 print("#####################################################################################")
 import Models
-print("#####################################################################################")
-print("################################	PROCESSING THE GENOTYPES ###########################")
-print("#####################################################################################")
-#import Genotypes
-	
+
+
+print("Complex Pheno/Geno is complete. Your results are saved in the folder /Outputs.\n")
+print("Please save the Output/ folder with your results under a different name, or next time you run Complex Pheno/Geno the data will be overwritter.")	
+print('''
+######## ##     ## ########    ######## ##    ## ########  
+   ##    ##     ## ##          ##       ###   ## ##     ## 
+   ##    ##     ## ##          ##       ####  ## ##     ## 
+   ##    ######### ######      ######   ## ## ## ##     ## 
+   ##    ##     ## ##          ##       ##  #### ##     ## 
+   ##    ##     ## ##          ##       ##   ### ##     ## 
+   ##    ##     ## ########    ######## ##    ## ########  ''')
 
 #if __name__ == "__main__":
 #	main()
