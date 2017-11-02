@@ -41,7 +41,7 @@ Only data in the folder "files" will be considered during analysis.
 
 ## C. Running Complex Pheno/Geno
 
-Once everything is set up, got to Terminal, inside the ComplexPhenoGeno folder, and type:
+Once everything is set up, go to Terminal, inside the ComplexPhenoGeno folder, and type:
 
 `python3 ComplexPhenoGeno.py`
 
@@ -53,7 +53,11 @@ This will start a guided interactive session that will take you through the step
 
 2. **Genotypes.py** The cohort genotypes (in compressed VCF format, as described above) are filtered by the list of rsIDs, created in step 1. This may take a while for large VCF files of big cohorts. You will be given a time estimate. The result of this step is saved as `Outputs/Genotypes.csv`, where each row is an individual, and each column is an rsID from the list determined in the previous step. The minor allele presence for each individual and each locus is encoded: 0 if not present, 1 if present heterozygous, and 2 if present homozygous.
 
-3. **Models.py** Clinical data are modeled as a linear regression (no interactions considered) and with random forests. The user is asked to decide the fraction of the data to be used for training (0.7 or above is recommended, but the size of the dataset should also be taken in consideration). The algorithms are run 50 times and the average and standard deviation of the AUC are returned to the user. A stable model should produce low standard deviations (*i.e.* the model is not significantly affected by the random data subset used). An AUC above 0.5 means prediction better than random, a value closer to 1 is considered best. In the case of the random forest model, a range of [tree depths](https://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/) is tested, and the mean AUC is calculated for each of these values. The depth were the AUCs converge (plateu to a maximum value) is the optimum value for the model. The explanatory variable for these models needs to be a well-understood The estimations for each model are repeated 50 times and the average AUC and 
+3. **Models_clin.py** Clinical data are modeled against a well-established endogenous risk factor for the disease of interest (*e.g.* age is a risk factor for age-related macular degeneration, or a person's BMI is a risk factor for diabetes) and each individual's deviation from the expected model (either its residual or observed/expected ratio for the risk factor used) is calculated. In this way, rather that relying on binary diagnoses, Complex Pheno/Geno uses the entire spectrum of clinical phenotypes to measure how dissimilar each individual's clinical profile is from the expected, based on the specific risk factor. It is important to note that this approach relies on having a big number of control individuals, and a good representation of the range of the clinical measurements and risk factor. 
+
+The data are modeled as both a linear regression (no interactions considered) and with random forests. The user is asked to decide the fraction of the data to be used for training (0.7 or above is recommended, but the size of the dataset should also be taken in consideration). The algorithms are run 50 times and the mean and standard deviation of the [AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) are returned to the user. A stable model should produce low standard deviations (*i.e.* the model is not significantly affected by the random data subset used). An AUC above 0.5 means prediction better than random, a value closer to 1 is considered best. In the case of the random forest model, a range of [tree depths](https://www.analyticsvidhya.com/blog/2015/06/tuning-random-forest-model/) is tested, and the mean AUC is calculated for each of these values. The minimum tree depth where the AUCs converge (plateu to a maximum value) is the optimum value for this hyperparameter. 
+
+
 
 4.
 

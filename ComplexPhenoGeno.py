@@ -18,7 +18,7 @@ print("\n\nComplex Pheno/Geno is written for Python 3.6 and is under development
 print("Please make sure plink 1.9 (https://www.cog-genomics.org/plink2) is installed in your computer before continuing.\nFor comments and suggestions e-mail rodoniki@gmail.com\n\n")
 print("Please make sure all the input files are in a subdirectory in the same folder as Complex Pheno/Geno.")
 print("The folder should be named files/") 
-print("Some toy datasets are already provided and will be used if you don't have the necessary folder.") 
+print("Some toy datasets are already provided and will be used if you don't have the necessary folder.\n\n") 
 
 from os import system
 import os
@@ -37,20 +37,20 @@ if os.path.exists('./../files/') == False:
 #make a class!
 system("mkdir ./../Outputs/")
 import rsIDs
-print("#####################################################################################")
+print("\n#####################################################################################")
 print("################	PROCESSING THE GENOTYPES AND FILTERING RSIDs #######################")
 print("#####################################################################################")
 import Genotypes
-print("#####################################################################################")
+print("\n#####################################################################################")
 print("################################	MODELLING CLINICAL DATA ############################")
 print("#####################################################################################")
-import Models
+import Models_clin
 
 
-print("Complex Pheno/Geno is complete. Your results are saved in the folder /Outputs.\n")
-print("Please save the Output/ folder with your results under a different name, or next time you run Complex Pheno/Geno the data will be overwritter.")	
+print("Complex Pheno/Geno is complete. Your results are saved in the folder Outputs/.\n")
+print("Please save the Outputs/ folder with your results under a different name, or next time you run Complex Pheno/Geno the data will be overwritter.")	
 print('''
-######## ##     ## ########    ######## ##    ## ########  
+\n\n######## ##     ## ########    ######## ##    ## ########  
    ##    ##     ## ##          ##       ###   ## ##     ## 
    ##    ##     ## ##          ##       ####  ## ##     ## 
    ##    ######### ######      ######   ## ## ## ##     ## 
