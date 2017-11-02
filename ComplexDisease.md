@@ -34,3 +34,4 @@ There has now been more than ten years, and thousands of publications referencin
 1. [A simple explanation of heredity in complex disease](https://www.med.unc.edu/neurology/files/documents/child-teaching-pdf/Genetics%20Disease.pdf) (UNC Chapel Hill, USA)
 2. [Genetic and environmental interactions in complex disease](http://www.genetics.edu.au/publications-and-resources/facts-sheets/fact-sheet-11-environmental-and-genetic-interactions) (New South Wales Health, Australia) 
 3. [Wikipedia entry on GWAS](https://en.wikipedia.org/wiki/Genome-wide_association_study)
+4. [Defining comorbidity](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2713155/)
