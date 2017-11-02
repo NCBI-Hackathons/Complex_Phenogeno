@@ -12,7 +12,7 @@ pct_train = float(input("What fraction of the clinical data do you want to use f
 print('##############	Calculating Linear Regression Model ########################')
 bar1 = ProgressBar()
 AUC_lm = []
-for i in bar1(range(1000)):
+for i in bar1(range(50)):
 	data = clin_data(clin_name, pct_train)
 
 	lm = linear_model.LinearRegression()
