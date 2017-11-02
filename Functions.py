@@ -36,7 +36,7 @@ def importRaw(Prefix):
 	tab.drop(to_drop, axis=1, inplace=True, errors='raise')
 	return(tab)
 
-def clin_data(name,pct_train):
+def clin_data(name,pct_train,regressor):
 
     ''' This function reads in the csv file of the given name from files, splits it randomly to
     train and test data according to the percentage of train data given,
@@ -53,10 +53,10 @@ def clin_data(name,pct_train):
     test_data = data.filter(items=test_idx, axis = 0)
 
     d = {
-    'train_Y' : train_data[train_data.columns[0]],
-    'test_Y' : test_data[test_data.columns[0]],
-    'train_X' : train_data.drop(train_data.columns[0], axis=1),
-    'test_X' : test_data.drop(test_data.columns[0],axis=1),
+    'train_Y' : train_data[regressor],
+    'test_Y' : test_data[regressor],
+    'train_X' : train_data.drop(regressor, axis=1),
+    'test_X' : test_data.drop(regressor,axis=1),
     'dataset' : data
     }
     return(d)
@@ -87,7 +87,8 @@ def empirical_auc(data, Y_hat):
             elif temp['obs'][j]<i and temp['pred'][j]>=i:
                 FP = FP + 1
             else:
-                print("WTF")
+                print("Something went wrong with calculating AUC scores.\n The calculated AUC might be inaccurate.")
+                break
 
         TPR.append(TP / (TP + FN))
         FPR.append(FP / (TN + FP))
