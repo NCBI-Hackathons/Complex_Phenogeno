@@ -1,6 +1,7 @@
 from Functions import clin_data, empirical_auc
 from sklearn import linear_model
 from sklearn.ensemble import RandomForestClassifier 
+import pandas as pd
 import numpy as np
 from progressbar import ProgressBar
 
