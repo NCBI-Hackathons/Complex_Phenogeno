@@ -28,7 +28,6 @@ else:
 	for i in range(1,len(prefix)):
 		B = importRaw(prefix[i])
 		A = A.merge(B, how = 'outer', on = 'FID')
-	print(A.head())
 	A.to_csv("./../Outputs/Genotypes.csv", sep="\t")
 
 	from os import system
