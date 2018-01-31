@@ -13,15 +13,17 @@
 
 1. Download Complex PhenoGeno from this repository to your computer.
 
-2. Open Terminal, cd to the newly downladed Complex PhenoGeno directory and run:
+2. (Optional, recommended) Create and open a new virtual environment within the Complex PhenoGeno directory. See [here](http://docs.python-guide.org/en/latest/dev/virtualenvs/) on more details on virtual environments.
+
+3. Open Terminal, cd to the newly downladed Complex PhenoGeno directory and run:
 
 `pip3 install -r requirements`
 
 This will install all the necessary python modules. It is advised that you create an environment dedicated to Complex Pheno/Geno and you run everything from it.
 
-3. Open the file "Settings.txt" and change the e-mail to the email you used for registering to [E-utilities](https://www.ncbi.nlm.nih.gov/home/develop/api/).
+4. Open the file "Settings.txt" and change the e-mail to the email you used for registering to [E-utilities](https://www.ncbi.nlm.nih.gov/home/develop/api/).
 
-4. Install [plink](https://www.cog-genomics.org/plink2).
+5. Install [plink](https://www.cog-genomics.org/plink2).
 
 ## B. Preparing the datasets
 
